@@ -5,10 +5,6 @@
 
    class Person {
       constructor(public name: string, public gender: Gender, public birdthdate: Date) {}
-
-      get mainPersonInfo(): string {
-         return `${this.name} - gender: ${this.gender} - birdthdate: ${this.birdthdate}`;
-      }
    }
 
    class User extends Person {
@@ -27,10 +23,6 @@
 
       checkCredentials(): boolean {
          return true;
-      }
-
-      get lastLogIn(): string {
-         return `Last Access: ${this.lastAccess}`;
       }
    }
 
@@ -57,9 +49,4 @@
       "M",
       new Date("1987/03/14")
    );
-
-   console.log(userSettings.checkCredentials());
-   console.log(userSettings.mainPersonInfo);
-   console.log({ userSettings });
-   console.log(userSettings.lastLogIn);
 })();
